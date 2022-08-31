@@ -21,8 +21,8 @@ entered the game!) the anti-terrorist team wins.
 
 ### The weapons of this game:
 
-Each player can buy a maximum of one weapon from the "Heavy" category and a maximum of one from the "Waist" category,
-also each player has a "knife" by default. Buying weapons is only possible in the first 45 seconds of the game. In other
+Each player can buy a maximum of one weapon from the **"Heavy"** category and a maximum of one from the **"Waist"** category,
+also each player has a **"knife"** by default. Buying weapons is only possible in the first 45 seconds of the game. In other
 words, purchases after 00:45:00 (including this moment) are not made.
 
 `Weapons of the terrorist team:`
@@ -93,10 +93,10 @@ dollars, we consider the amount of money of the player to be the same as 10,000 
 ### Times in the game:
 
 To show the events of the game, at the end of each event, we print a time tag that is a string. The format of this
-string is mm:ss:ttt, which shows the time in mm minutes, ss seconds and ttt milliseconds. For example, 01:48:932 means
+string is `mm:ss:ttt`, which shows the time in `mm` minutes, `ss` seconds and `ttt` milliseconds. For example, `01:48:932` means
 this happened 1 minute 48 seconds and 932 milliseconds after the start of this game. It is guaranteed that the times of
 each hand are given in such a way that no two events occur at the same time. Also, nothing happens at the beginning and
-end of the hand. In fact, all event times are between 00:00:001 and 02:14:999. All events are guaranteed to be in
+end of the hand. In fact, all event times are between `00:00:001` and `02:14:999`. All events are guaranteed to be in
 ascending order.
 
 ----------------------------------------------
@@ -104,7 +104,7 @@ ascending order.
 ### A hand of the game:
 
 The times at the end of an event report are from the start time of that hand, not the start time of the first hand of
-the game. When a player enters the game after 00:03:00 seconds (including this moment) in a hand, he enters the game as
+the game. When a player enters the game after `00:03:00` seconds (including this moment) in a hand, he enters the game as
 dead (but this death is not counted among the number of times killed.) That is, this player's life is 0 and his money is
 1000, and can start its activity from the next hand. Note that even a player who enters from the middle of the game will
 receive the money he earns for winning or losing that hand. Players transfer their winnings from one hand to the next.
@@ -116,7 +116,7 @@ We want you to write a program that will determine the state of the game and the
 information about various game events.
 
 After each hand is finished, print the name of the winning team. That is, if the terrorist team wins this hand, print
-the word Terrorist won, and if the counter-terrorist team wins this hand, print the word Counter-Terrorist won.
+the word **"Terrorist won"**, and if the counter-terrorist team wins this hand, print the word **"Counter-Terrorist won"**.
 
 --------------------------------------------
 Guide to reading the instructions
@@ -144,17 +144,17 @@ Note that the system is sensitive to small and large letters.
 
 In this request, a person named `<username>` joins one of the terrorist or counter-terrorist teams at `<time>`.
 
-`<username>` is always followed by exactly one of the strings Terrorist or Counter-Terrorist, which respectively
+`<username>` is always followed by exactly one of the strings **"Terrorist"** or **"Counter-Terrorist"**, which respectively
 indicate the team this player joins.
 
-If the following problems exist, you must print exactly one of the following errors in order. If several items occur
+If the following problems exist, you must print "exactly" one of the following errors in order. If several items occur
 together, the item with a lower number should be done.
 
-If a player (in each of these two teams) with such a username has already entered the game, print the message you are
-already in this game.
-If the capacity of the team that this player wants to join is complete. It means that at that moment there are 10
-players in the team of this player, print the message this team is full.
-Otherwise, add this player to the desired team and print the message this user added to `[Terrorist/Counter-Terrorist]`
+1. If a player (in each of these two teams) with such a username has already entered the game, print the message **"you are
+already in this game"**.
+2. If the capacity of the team that this player wants to join is complete. It means that at that moment there are 10
+players in the team of this player, print the message **"this team is full"**.
+3. Otherwise, add this player to the desired team and print the message **"this user added to `[Terrorist/Counter-Terrorist]`"**
 and put the name of the team in the last string.
 
 #### Example input from this command:
@@ -171,7 +171,7 @@ and put the name of the team in the last string.
 
 In this command, we want you to print the amount of money of player `<username>` at the moment `<time>`.
 
-If there is no player with the username `<username>` in the game at this moment, print the message invalid username.
+If there is no player with the username `<username>` in the game at this moment, print the message **"invalid username"**.
 
 #### Example input from this command:
 
@@ -185,7 +185,7 @@ If there is no player with the username `<username>` in the game at this moment,
 
 In this command, we want you to print the amount of life of player `<username>` at the moment `<time>`.
 
-If there is no player with the username `<username>` in the game at this moment, print the message invalid username.
+If there is no player with the username `<username>` in the game at this moment, print the message **"invalid username"**.
 Note
 that if this player is dead, his life value is 0.
 
@@ -204,13 +204,13 @@ that if this player is dead, his life value is 0.
 In this command, we declare that a player with the username `<attacker>` hits the player with the user name `<attacked>`
 with his heavy weapon or pistol or knife at the moment `<time>`.
 
-If one of the `<attacker>` or `<attacked>` players does not exist in the game at this moment, print the invalid username
+1. If one of the `<attacker>` or `<attacked>` players does not exist in the game at this moment, print the **"invalid username"**
 message.
-If `<attacker>` has been killed before this point, print the message attacker is dead.
-If `<attacked>` was killed before this moment (not because of this shot), print the message attacked is dead.
-If `<attacker>` does not have a gun of this type, print the message no such gun.
-If both `<attacker>` and `<attacked>` are on the same team, print the friendly fire message.
-Otherwise, record the shot and print the nice shot message.
+2. If `<attacker>` has been killed before this point, print the message **"attacker is dead"**.
+3. If `<attacked>` was killed before this moment (not because of this shot), print the message **"attacked is dead"**.
+4. If `<attacker>` does not have a gun of this type, print the message **"no such gun"**.
+5. If both `<attacker>` and `<attacked>` are on the same team, print the **"friendly fire"** message.
+6. Otherwise, record the shot and print the **"nice shot"** message.
 
 #### Example input from this command:
 
@@ -226,15 +226,15 @@ Otherwise, record the shot and print the nice shot message.
 
 In this command, player `<username>` requests to buy gun `<gun_name>` at `<time>`.
 
-If there is no player with the name `<username>` in the game, print the message invalid username.
-If player `<username>` is not alive, print the message **"deads can not buy"**.
-If `<time>` comes after the moment 00:45:00 (including this moment), print the message **"you are out of time"**.
-If the gun `<gun_name>` is not in the list of authorized guns of the buying team, print the message invalid category
-gun.
-If a weapon of this category (heavy pistol) has already been purchased by this player, print the message you have
-a `[heavy/pistol]`.
-If this player does not have enough money to buy this weapon, print the message no enough money.
-If none of the above events happen, print the message "I hope you can use it" and register the weapon for this player.
+1. If there is no player with the name `<username>` in the game, print the message **"invalid username"**.
+2. If player `<username>` is not alive, print the message **"deads can not buy"**.
+3. If `<time>` comes after the moment 00:45:00 (including this moment), print the message **"you are out of time"**.
+4. If the gun `<gun_name>` is not in the list of authorized guns of the buying team, print the message **"invalid category 
+gun"**.
+5. If a weapon of this category (heavy pistol) has already been purchased by this player, print the message **"you have
+a `[heavy/pistol]`"**.
+6. If this player does not have enough money to buy this weapon, print the message **"no enough money"**.
+7. If none of the above events happen, print the message **"I hope you can use it"** and register the weapon for this player.
 
 #### Example input from this command:
 
@@ -267,9 +267,9 @@ number
 of `<kills>`, the profile of the player with the lower number of `<killed>` will be printed earlier. If two players were
 equal in both of these numbers, the player who entered the game earlier will be printed earlier.
 
-To print the scoreboard, first print the words: Counter-Terrorist-Players in one line, which indicates that we want to
+To print the scoreboard, first print the words **"Counter-Terrorist-Players:"** in one line, which indicates that we want to
 write this team's banner. Then we print the details of each player of the anti-terrorist team in one line according to
-the above description. Then we print the expression: Terrorist-Players in the next line and in the next lines we print
+the above description. Then we print the expression **"Terrorist-Players:"** in the next line and in the next lines we print
 the details of the players of the anti-terrorist team.
 
 ---------------------------------------------------------
@@ -294,8 +294,8 @@ To better understand the inputs, pay attention to the sample examples.
 ## Output:
 
 You should print the corresponding output in a separate line for each command in the input. Print the winning hand after
-each hand is finished. That is, if the terrorist team wins this hand, print the expression `Terrorist won`, and if the
-counter-terrorist team wins this hand, print the expression `Counter-Terrorist won` in a separate line.
+each hand is finished. That is, if the terrorist team wins this hand, print the expression **"Terrorist won"**, and if the
+counter-terrorist team wins this hand, print the expression **"Counter-Terrorist won"** in a separate line.
 
 ----------------------------------------------------------
 
