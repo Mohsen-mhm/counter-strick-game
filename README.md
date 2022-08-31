@@ -45,7 +45,9 @@ words, purchases after 00:45:00 (including this moment) are not made.
 
 Everyone has this weapon, and it cannot be bought, every time it is used it reduces the life of the opposing player by
 43 units, and if a player is killed with this weapon, $500 is immediately paid to the player who hit.
+
 --------------------------------------------------------
+
 `Weapons of the Counter terrorist team:`
 
 **heavy weapon:**
@@ -66,6 +68,7 @@ Everyone has this weapon, and it cannot be bought, every time it is used it redu
 
 Everyone has this weapon, and it cannot be bought, every time it is used it reduces the life of the opposing player by
 43 units, and if a player is killed with this weapon, $500 is immediately paid to the player who hit.
+
 -------------------------------------
 
 ### The lives of the players and its importance:
@@ -78,6 +81,7 @@ be lost. After killing every player from the opposing team, each player earns so
 type. Someone gets a kill if they get that player to 0 for the first time. Note that no one's life is negative. That is,
 if the life reduction rate of a shot is greater than the current value of the target player's life, the value of that
 player's life becomes 0.
+
 -----------------------------------------------
 
 ### Player money and its uses:
@@ -119,7 +123,8 @@ After each hand is finished, print the name of the winning team. That is, if the
 the word **"Terrorist won"**, and if the counter-terrorist team wins this hand, print the word **"Counter-Terrorist won"**.
 
 --------------------------------------------
-Guide to reading the instructions
+
+### Guide to reading the instructions:
 The items inside `<>` mean that the appropriate value will be placed in their place.
 
 Items that are separated by \ in [ ] means that exactly one of these items comes in the input.
