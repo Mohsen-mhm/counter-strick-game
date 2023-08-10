@@ -4,7 +4,7 @@
 
 --------------------------------------------------
 
-#### You can see the question form of this exercise from the link below in `Farsi`:
+#### You can see the question form of this exercise from the link below in `Persian`:
 
 #### https://quera.org/problemset/123805
 
